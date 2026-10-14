@@ -12,6 +12,7 @@
 
 import { moduleFileExtensionsPlugin } from 'cem-plugin-module-file-extensions';
 import defineElementPlugin from './scripts/define-element-plugin.js';
+import localTypesPlugin from './scripts/cem-plugin-local-types.js';
 
 export default {
   globs: [
@@ -32,5 +33,9 @@ export default {
   outdir: '.',
   litelement: true,
   packagejson: false,
-  plugins: [moduleFileExtensionsPlugin(), defineElementPlugin()],
+  plugins: [
+    moduleFileExtensionsPlugin(),
+    defineElementPlugin(),
+    localTypesPlugin(),
+  ],
 };
